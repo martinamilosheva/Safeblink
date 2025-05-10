@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Safeblink</title>
+    <meta name="keywords" content="html,css,javaScript" />
+    <meta name="description" content="Bikes" />
+    <meta name="author" content="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- Latest compiled and minified BOOTSTRAP CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+
+    <!-- Font-awesome 6 cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg px-3">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#safeblink">
+          <img src="./images/logo.png" style="height: 50px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <div class="navbar-nav me-auto fw-bold">
+            <a href="#information" class="nav-link">Информирај се</a>
+            <a href="#discussion" class="nav-link">Дискусии</a>
+            <a href="#contact" class="nav-link">Контакт</a>
+            <a id="profile-link" href="#profile" class="nav-link">Профил</a>
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <button
+              id="login-button"
+              class="btn d-flex align-items-center justify-content-center gap-2"
+            >
+              <i class="fa-solid fa-user me-1 nav-link" id="user-icon"></i>
+              <a id="login-link" href="#login" class="nav-link p-0"
+                >Најави се</a
+              >
+            </button>
+            <div class="d-flex align-items-center gap-2 fw-bold">
+              <p class="m-0 nav-link">MK</p>
+              <p class="m-0 nav-link">|</p>
+              <p class="m-0 nav-link">AL</p>
+              <i class="fa-solid fa-magnifying-glass ms-3 nav-link"></i>
+            </div>
+            <button id="logout-button" class="btn">Одјави се</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="safeblink">
+      <div
+        class="banner d-flex flex-column align-items-center justify-content-center text-center"
+        data-bs-toggle="modal"
+        data-bs-target="#videoModal"
+        style="cursor: pointer"
+      >
+        <div class="col-12">
+          <img
+            src="./images/landing.png"
+            alt="Banner"
+            class="banner-image img-fluid"
+          />
+        </div>
+        <!-- Modal -->
+        <div
+          class="modal fade"
+          id="videoModal"
+          tabindex="-1"
+          aria-labelledby="videoModalLabel"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="videoModalLabel">
+                  Watch Video
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="ratio ratio-16x9">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/agg63ROJllc?si=PKE6j64zuuZGBbNy"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="text-center text-white my-4 fw-bold">
+        Информирај се и заштити се
+      </h1>
+      <div class="container my-5 p-0">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card card-1 h-100">
+              <div class="d-flex align-items-center p-3">
+                <h5 class="card-title">Научи се што треба да знаеш</h5>
+                <img
+                  src="./images/first-card-icon.png"
+                  class="me-3 rounded"
+                  alt="Card 1 Image"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate nisi consequatur dicta consequuntur rerum nam
+                  asperiores optio corporis aspernatur excepturi. Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Sunt consequatur
+                  eveniet quasi excepturi dignissimos molestias tempora
+                  inventore?
+                </p>
+                <a href="#" class="btn btn-1 mt-3">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-2 h-100">
+              <div class="d-flex align-items-center p-3">
+                <h5 class="card-title">Вклучи се во дискусија</h5>
+                <img
+                  src="./images/second-card-icon.png"
+                  class="me-3 rounded"
+                  alt="Card 2 Image"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate nisi consequatur dicta consequuntur rerum nam
+                  asperiores optio corporis aspernatur excepturi. Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Sunt consequatur
+                  eveniet quasi excepturi dignissimos molestias tempora
+                  inventore?
+                </p>
+                <a href="#" class="btn btn-2 mt-3">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card card-3 h-100">
+              <div class="d-flex align-items-center p-3">
+                <h5 class="card-title">Следи го својот напредок</h5>
+                <img
+                  src="./images/third-card-icon.png"
+                  class="me-3 rounded"
+                  alt="Card 3 Image"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cupiditate nisi consequatur dicta consequuntur rerum nam
+                  asperiores optio corporis aspernatur excepturi. Lorem, ipsum
+                  dolor sit amet consectetur adipisicing elit. Sunt consequatur
+                  eveniet quasi excepturi dignissimos molestias tempora
+                  inventore?
+                </p>
+                <a href="#" class="btn btn-3 mt-3">Дознај повеќе</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="information" class="py-5">
+      <div class="container p-0">
+        <h2 class="text-left text-white py-4 fw-bold">Сè што треба да знаеш</h2>
+        <div class="d-flex justify-content-center mb-4 gap-5">
+          <button class="btn-custom mx-2 inactive" id="btn1">Видеа</button>
+          <button class="btn-custom mx-2 inactive" id="btn2">Статии</button>
+          <button class="btn-custom mx-2 inactive" id="btn3">Упатства</button>
+        </div>
+        <div class="button-filters d-flex justify-content-center mb-4">
+          <button
+            id="most-watched-filter"
+            class="btn filter-btn inactive-filter active"
+            data-category="most-watched"
+          >
+            Најгледани
+          </button>
+          <button
+            id="actual-category-filter"
+            class="btn filter-btn inactive-filter active"
+            data-category="actual"
+          >
+            Aктуелно
+          </button>
+          <button
+            id="lorem-filter"
+            class="btn filter-btn inactive-filter active"
+            data-category="lorem"
+          >
+            Лорем
+          </button>
+          <button
+            id="internet-videos-filter"
+            class="btn filter-btn inactive-filter active"
+            data-category="internet-videos"
+          >
+            Интернет видеа
+          </button>
+          <button
+            id="privacy-filter"
+            class="btn filter-btn inactive-filter active"
+            data-category="privacy"
+          >
+            Приватност
+          </button>
+        </div>
+        <div class="row" id="cards-container"></div>
+      </div>
+      <div id="cardModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content-info">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalTitle"></h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-12 col-md-6 pe-3">
+                  <p id="modalDescription" class="mb-3"></p>
+                  <div class="leave-comment comment mb-4 p-3 border-rounded">
+                    <textarea
+                      id="modalComment"
+                      class="form-control mb-2"
+                      placeholder="Остави коментар..."
+                    ></textarea>
+                    <button id="submit-comment" class="btn btn-card">Објави Коментар</button>
+                    <hr />
+                    <div id="user-info" class="d-flex align-items-center mb-2">
+                      <img
+                        id="user-image"
+                        src=""
+                        class="rounded-circle me-2"
+                        width="30"
+                        height="30"
+                      />
+                      <div>
+                        <small><strong id="user-name">Guest</strong></small>
+                      </div>
+                    </div>
+                  </div>
+                    <div id="comments-list">
+                    <div class="comment mb-3 p-3 border-rounded">
+                      <p>This is a hardcoded comment by Jane Doe.</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mt-2"
+                      >
+                        <div class="d-flex justify-content-between">
+                          <img
+                            src="./images/user2.png"
+                            class="rounded-circle me-2"
+                            width="30"
+                            height="30"
+                          />
+                          <div>
+                            <small><strong>Jane Doe</strong></small>
+                          </div>
+                        </div>
+                        <small class="text-muted">2025-05-08 14:23</small>
+                      </div>
+                    </div>
+                    <div class="comment mb-3 p-3 border-rounded">
+                      <p>Another great video!</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mt-2"
+                      >
+                        <div class="d-flex align-items-center">
+                          <img
+                            src="./images/user3.png"
+                            class="rounded-circle me-2"
+                            width="30"
+                            height="30"
+                          />
+                          <div>
+                            <small><strong>John Smith</strong></small>
+                          </div>
+                        </div>
+                        <small class="text-muted">2025-05-07 18:45</small>
+                      </div>
+                    </div>
+                    <div class="comment mb-3 p-3 border-rounded">
+                      <p>This is a hardcoded comment by Jane Doe.</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center mt-2"
+                      >
+                        <div class="d-flex justify-content-between">
+                          <img
+                            src="./images/user4.png"
+                            class="rounded-circle me-2"
+                            width="30"
+                            height="30"
+                          />
+                          <div>
+                            <small><strong>Jane Doe</strong></small>
+                          </div>
+                        </div>
+                        <small class="text-muted">2025-05-08 14:23</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="col-12 col-md-6 modal-image-container position-relative d-inline-block"
+                >
+                  <img
+                    id="modalImage"
+                    src=""
+                    alt="Card Image"
+                    class="img-fluid rounded shadow"
+                    style="cursor: pointer"
+                  />
+                  <div class="play-button-overlay">
+                    <i class="fas fa-play"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="discussion" class="py-5">
+      <button
+        id="see-more"
+        class="btn border-0 text-white"
+        style="display: none"
+      >
+        Види повеќе
+      </button>
+      <div class="container p-0">
+        <h2 class="text-left text-white py-4 fw-bold fs-1">
+          Taбла за дискусии
+        </h2>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5">
+      <div class="container p-0">
+        <h2 class="text-left text-white py-4 fw-bold fs-1">Koнтакт</h2>
+      </div>
+    </section>
+
+    <section id="profile">
+      <div class="container p-0">
+        <h2 class="text-left text-white py-4 fw-bold fs-1">Профил</h2>
+      </div>
+    </section>
+
+    <section id="login" class="py-5">
+      <div class="container p-0">
+        <div class="row align-items-center">
+          <div class="col-md-6 mb-4">
+            <h2 class="text-left text-white py-4 fw-bold fs-1">
+              Придружи ни се
+            </h2>
+            <div class="mb-3">
+              <a
+                href="#"
+                class="btn btn-outline-purple text-start bg-white w-75 mb-2"
+              >
+                <i class="fab fa-google me-2"></i> Продолжи со Google
+              </a>
+              <a
+                href="#"
+                class="btn btn-outline-purple text-start bg-white w-75 mb-2"
+              >
+                <i class="fab fa-apple me-2"></i> Продолжи со Apple
+              </a>
+              <a
+                href="#"
+                class="btn btn-outline-purple text-start bg-white w-75 mb-2"
+              >
+                <i class="fab fa-tiktok me-2"></i> Продолжи со TikTok
+              </a>
+            </div>
+            <div class="d-flex align-items-center mb-3 w-75">
+              <hr class="flex-grow-1" />
+              <span class="mx-2 text-white fw-bold">или</span>
+              <hr class="flex-grow-1" />
+            </div>
+            <form id="login-form">
+              <div class="d-flex flex-column w-75 mb-3">
+                <label for="username" class="form-label text-white fw-bold"
+                  >Корисничко име *</label
+                >
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Username"
+                  class="form-control"
+                  required
+                />
+                <div class="invalid-feedback">
+                  Ве молиме внесете корисничко име.
+                </div>
+              </div>
+              <div class="d-flex flex-column w-75">
+                <label for="password" class="form-label text-white fw-bold"
+                  >Лозинка *</label
+                >
+                <div class="input-group">
+                  <input
+                    type="password"
+                    name="passowrd"
+                    id="password"
+                    placeholder="Password"
+                    class="form-control"
+                    required
+                  />
+                  <span class="input-group-text">
+                    <i
+                      class="fa fa-eye-slash"
+                      id="togglePassword"
+                      style="cursor: pointer"
+                    ></i>
+                  </span>
+                </div>
+                <div class="invalid-feedback">Ве молиме внесете лозинка.</div>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-3"
+                >
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="rememberMe"
+                    />
+                    <label class="form-check-label text-white" for="rememberMe">
+                      Запомни ме
+                    </label>
+                  </div>
+                  <p class="mb-0">
+                    <a href="#" class="text-decoration-none text-white"
+                      >Ја заборави лозинката?</a
+                    >
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center w-75">
+                <button type="submit" class="btn w-50 mt-5 login-btn fw-bold">
+                  Најави се
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <img
+              src="./images/login.png"
+              alt="Login Image"
+              class="img-fluid"
+              style="max-height: 400px"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div
+      class="modal fade"
+      id="welcomeModal"
+      tabindex="-1"
+      aria-labelledby="welcomeModalLabel"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content modal-content-login text-center">
+          <div class="modal-header border-0">
+            <h5
+              class="modal-title text-white fw-bold text-center w-100 fs-2"
+              id="welcomeModalLabel"
+            >
+              Добредојде!
+            </h5>
+          </div>
+          <div class="modal-body">
+            <p class="text-white">Успешно креиран профил</p>
+            <button id="go-to-profile" class="btn mt-5">
+              Продолжи кон Safeblink
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer text-white py-5">
+      <div class="container p-0 h-100 d-flex flex-column">
+        <div class="row align-items-stretch flex-grow-1">
+          <!-- Left column -->
+          <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div class="d-flex flex-column justify-content-between w-100">
+              <div>
+                <img
+                  src="./images/white logo.png"
+                  alt="Logo"
+                  style="height: 50px"
+                  class="mb-2"
+                />
+                <p>International Foundation for Electoral Systems (IFES)</p>
+              </div>
+              <div class="d-flex flex-wrap align-items-center">
+                <span class="me-3"
+                  ><i class="fa fa-phone me-2"></i> +389-2-312-2288</span
+                >
+                <span
+                  ><i class="fa fa-envelope me-2"></i> ifes.nmk@ifes.org</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-4 mb-md-0 d-flex">
+            <div
+              class="d-flex flex-column h-100 w-100 align-items-stretch justify-content-between"
+            >
+              <div>
+                <p class="mb-3">
+                  <a href="#information" class="text-white text-decoration-none"
+                    >Информирај се</a
+                  >
+                </p>
+                <p class="mb-3">
+                  <a href="#discussion" class="text-white text-decoration-none"
+                    >Дискусии</a
+                  >
+                </p>
+                <p class="mb-3">
+                  <a href="#contact" class="text-white text-decoration-none"
+                    >Контакт</a
+                  >
+                </p>
+                <p>
+                  <a href="#" class="text-white text-decoration-none"
+                    >Закон за заштита на личните податоци</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 d-flex">
+            <div
+              class="d-flex flex-column justify-content-between w-100 text-md-end"
+            >
+              <div class="mb-2">
+                <span class="me-2">MK</span> | <span class="ms-2">AL</span>
+              </div>
+              <div
+                class="d-flex justify-content-center justify-content-md-end mb-2"
+              >
+                <a href="#" class="text-white me-3"
+                  ><i class="fab fa-facebook fa-lg"></i
+                ></a>
+                <a href="#" class="text-white me-3"
+                  ><i class="fab fa-instagram fa-lg"></i
+                ></a>
+                <a href="#" class="text-white me-3"
+                  ><i class="fab fa-youtube fa-lg"></i
+                ></a>
+                <a href="#" class="text-white"
+                  ><i class="fab fa-tiktok fa-lg"></i
+                ></a>
+              </div>
+              <p class="mb-0 text-center text-md-end">
+                &copy; All rights reserved. <span> | </span> safeblink.mk
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--latest jqery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Bootstrap popper.js for the modal iframe-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./index.js" type="module"></script>
+    <script src="./sessionHelper.js" type="module"></script>
+    <script src="../learn-page/cardsData.js" type="module"></script>
+    <script src="../learn-page/index.js" type="module"></script>
+  </body>
+</html>
